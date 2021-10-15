@@ -1,0 +1,120 @@
+.watchlist-main-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.watchlist-cont {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+.watchlist-title-wrapper {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.watchlist-title-wrapper h2 {
+  color: white;
+  font-size: 30px;
+  font-family: "Cairo", sans-serif;
+}
+.watchlist-movies-wrapper {
+  display: flex;
+  height: 400px;
+  width: 100%;
+  padding: 10px;
+  flex-direction: column;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.watchlist-movies-wrapper::-webkit-scrollbar{
+  display: none;
+}
+.wl-movie-wrapper {
+  display: flex;
+  height: 100px;
+  min-height: 100px;
+  width: 100%;
+  align-items: center;
+  margin-top: 20px;
+  transition-timing-function: ease;
+  transition-duration: 0.4s;
+  padding: 20px;
+  border-radius: 10px;
+}
+.wl-movie-wrapper:hover{
+  background: #24262b;
+  cursor: pointer;
+}
+.wl-image-wrapper {
+  display: flex;
+  height: 50px;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px 10px 4px black;
+}
+.wl-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.wl-image-wrapper img:hover{
+  cursor: pointer;
+}
+.wl-title-wrapper {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex: 0.5;
+  padding: 4px;
+  justify-content: space-evenly;
+}
+.wl-title-wrapper h3 {
+  color: white;
+  font-size: 15px;
+  font-family: "Cairo", sans-serif;
+}
+.wl-title-wrapper h4 {
+  color: white;
+  font-size: 12px;
+  font-family: "Cairo", sans-serif;
+}
+.wl-controls-wrapper {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 0.3;
+}
+.wl-controls-wrapper button {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  width: 120px;
+  color: white;
+  background: rgba(49, 49, 49, 0.556);
+  border: none;
+  margin-left: 40px;
+  padding: 4px;
+  transition-timing-function: ease;
+  transition-duration: 0.4s;
+}
+.wl-controls-wrapper button:hover {
+  scale: 1.09;
+  background: tomato;
+  cursor: pointer;
+}
+.cog{
+    display: none;
+}

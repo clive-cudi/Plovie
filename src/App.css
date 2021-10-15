@@ -1,0 +1,337 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-size: calc(10px + 2vmin);
+}
+html{
+  scroll-behavior: smooth;
+}
+.App{
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  /* background: #282c34; */
+  background: #191c21;
+  /* background: black; */
+  overflow: auto;
+}
+.content{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+.navbar-wrapper{
+  display: flex;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  /* background: rgba(73, 73, 73, 0.426); */
+  box-shadow: 0px 0px 5px 5px rgb(38, 38, 38);
+  z-index: 1;
+}
+.banner-main-wrapper{
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+}
+.movie-rows-main-wrapper{
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.row-main-wrapper{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  /* padding: 10px; */
+}
+.row-title-wrapper{
+  display: flex;
+  height: 40px;
+  width: 100%;
+  align-items: center;
+  border-bottom: 0.5px solid rgb(90, 90, 90);
+  padding: 4px;
+}
+.row-title-wrapper h1{
+  color: white;
+  padding: 4px;
+}
+.posters-wrapper{
+  display: flex;
+  height: 240px;
+  width: 100%;
+  overflow: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  align-items: center;
+}
+.posters-wrapper::-webkit-scrollbar{
+  display: none;
+}
+.image-cont{
+  display: flex;
+  height: 200px;
+  min-width: 150px;
+  width: 100px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  box-shadow: 2.5px 2.5px 4px 4px rgb(19, 19, 19);
+}
+.image-cont img{
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  transition-timing-function: ease;
+  transition-duration: 0.6s;
+}
+/* .image-cont:hover{
+  scale: 1.02;
+} */
+.poster-image:hover{
+  scale: 1.05;
+}
+.navbar-cont{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.banner-main-cont{
+  display: flex;
+  height: 500px;
+  width: 100%;
+  /* background: tomato; */
+}
+.project-title-wrapper{
+  display: flex;
+  height: 100%;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+.project-title-cont{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-shadow: 0.5px 0.5px 1.5px 1.5px rgb(38, 38, 38);
+}
+.project-title-cont h2{
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.nav-controls-wrapper{
+  display: flex;
+  height: 100%;
+  width: 420px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.nav-controls{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.nav-controls button {
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  width: auto;
+  height: 100%;
+  margin-left: 10px;
+  background: none;
+  border: none;
+  box-shadow: 0.5px 0.5px 1.5px 1.5px rgb(38, 38, 38);
+  color: white;
+  padding: 8px;
+  transition-timing-function: ease;
+  transition-duration: 0.2s;
+}
+.nav-controls i{
+  font-size: 12px;
+}
+.nav-controls button:hover{
+  background: tomato;
+  scale: 1.02;
+}
+.banner-main-cont{
+  /* background-image: url('./components/assets/Money-Heist-Season-5.jpg'); */
+  object-fit: contain;
+  background-size: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+.banner-main-cont img{
+  height: 100%;
+  width: 100%;
+}
+.navred{
+  display: flex;
+  background: tomato;
+  justify-content: space-between;
+  width: 100%;
+}
+.banner-title-wrapper{
+  display: flex;
+  height: 70%;
+  width: 100%;
+  /* background: black; */
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 80px;
+}
+.movie-title-wrapper{
+  display: flex;
+  height: 100px;
+  width: 100%;
+  align-items: center;
+}
+.movie-title-wrapper h1{
+  color: white;
+  font-size: 42px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.movie-controls-wrapper{
+  display: flex;
+  height: 40px;
+  width: 100%;
+  align-items: center;
+}
+.movie-controls-wrapper button {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  width: 120px;
+  color: white;
+  background: rgba(49, 49, 49, 0.556);
+  border: none;
+  margin-left: 40px;
+  padding: 4px;
+  transition-timing-function: ease;
+  transition-duration: 0.4s;
+}
+.movie-controls-wrapper button:hover{
+  scale: 1.09;
+  background: tomato;
+}
+.movie-about{
+  display: flex;
+  height: 120px;
+  max-width: 500px;
+  margin-top: 40px;
+}
+.movie-about h5{
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-shadow: 0.5px 0.5px gray;
+  font-size: 18px;
+}
+.banner-bottom-fader{
+  margin-top: 10px;
+  display: flex;
+  height: 100px;
+  width: 100%;
+  justify-content: space-between;
+  /* background: linear-gradient(180deg, #282c3400, #282c3488, #282c34d0, #282c34); */
+  /* background: linear-gradient(180deg, rgba(0, 0, 0, 0), black); */
+  background: linear-gradient(180deg, #191c2100,#191c21);
+}
+.image-cont {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.image-cont button{
+  display: none;
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  margin: 4px;
+  background: rgba(0, 0, 0, 0.474);
+  border: none;
+  color: white;
+  border-radius: 4px;
+  transition-timing-function: ease;
+  transition-duration: 0.4s;
+}
+.image-cont:hover button{
+  display: flex;
+  cursor: pointer;
+}
+.image-cont button:hover{
+  color: tomato;
+  scale: 1.04;
+}
+.image-cont .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(0, 0, 0, 0.474);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 10%;
+  left: 50%;
+  margin-left: -60px;
+  font-family:  'Cairo', sans-serif;
+  font-size: 12px;
+  
+  /* Fade in ima.image-cont - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 8s;
+}
+.image-cont:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.banner-player-wrapper{
+  display: flex;
+  height: 700px;
+  width: 100%;
+}
+.banner-player{
+  width: 100%;
+}
+@media (max-width: 455px) {
+  .signup-btn{
+    display: none;
+  }
+  .nav-controls-wrapper{
+    width: 120px
+  }
+  .movie-about{
+    overflow: auto;
+  }
+  .movie-about h5{
+    font-size: 14px;
+  }
+  .movie-title-wrapper h1{
+    font-size: 30px;
+  }
+}
