@@ -1,11 +1,14 @@
 ## Plovie
 A movie web application.
 
+## 
+Still working on recommendations.
+
 ## Available Scripts
 
 In the project directory, you can run:
 
-###`npm install`
+### `npm install`
 To install necessary dependencies
 
 ### `npm start`
