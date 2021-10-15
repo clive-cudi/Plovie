@@ -59,7 +59,7 @@ export const WatchlistCtxProvider = ({ children }) => {
 };
 
 export const DisplayWatchListCtxProvider = ({children}) => {
-  const [showWatchlist, setShowWatchlist] = useState(true);
+  const [showWatchlist, setShowWatchlist] = useState(false);
 
   return (
     <displayWatchListCtx.Provider value={[showWatchlist, setShowWatchlist]} >
