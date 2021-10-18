@@ -6,6 +6,7 @@ import { UserNameCtxProvider } from "./components/contexts/UserNameCtx";
 import { WatchlistCtxProvider } from "./components/contexts/WatchListCtx";
 import { DisplayWatchListCtxProvider } from "./components/contexts/WatchListCtx";
 import { GenresCtxProvider } from "./components/contexts/Genres";
+import { PosterModalCtxProvider } from "./components/contexts/PosterModalCtx";
 
 function App() {
   return (
@@ -14,11 +15,13 @@ function App() {
         <WatchlistCtxProvider>
           <DisplayWatchListCtxProvider>
             <PlayerContextProvider>
-              <div className="App">
-                <div className="content">
-                  <Routing />
+              <PosterModalCtxProvider>
+                <div className="App">
+                  <div className="content">
+                    <Routing />
+                  </div>
                 </div>
-              </div>
+              </PosterModalCtxProvider>
             </PlayerContextProvider>
           </DisplayWatchListCtxProvider>
         </WatchlistCtxProvider>

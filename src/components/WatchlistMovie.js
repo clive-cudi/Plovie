@@ -1,9 +1,27 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { useContext } from "react";
+import { PosterModalCtx } from "./contexts/PosterModalCtx";
 
 function WatchlistMovie({ name, image, number, genre }) {
   const [minSettings, setMinSettings] = useState(false);
+  const [showPosterModal, setPosterModal] = useContext(PosterModalCtx)
+
+  function togglePosterModal(){
+    if (showPosterModal == true){
+      setPosterModal({
+        status: false,
+        image: ""
+      })
+    } else {
+      setPosterModal({
+        status: true,
+        image: image
+      })
+      console.log(showPosterModal.image)
+    }
+  }
   useEffect(() => {
     if (window.innerWidth < 800) {
       setMinSettings(true);
@@ -17,7 +35,10 @@ function WatchlistMovie({ name, image, number, genre }) {
         <h5>{number}</h5>
       </div>
       <div className="wl-image-wrapper">
-        <img src={image} alt="@" />
+        <img src={image} alt="@" onClick={()=>{
+          togglePosterModal()
+        }} />
+        <span title="View Poster"></span>
       </div>
       <div className="wl-title-wrapper">
         <h3>{name == "undefined" ? "Netflix Original" : `${name}`}</h3>
