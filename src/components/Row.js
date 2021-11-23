@@ -41,6 +41,11 @@ function Row({ title, fetchUrl, idHeader }) {
     fetchData();
   }, [fetchUrl]);
 
+
+  function handleCheck({movieId}){
+    return watchlist.includes({id: movieId}) ? true : false;
+  }
+
   function handleClick(movie) {
     if (trailerUrl) {
       setTrailerUrl("");
@@ -86,6 +91,7 @@ function Row({ title, fetchUrl, idHeader }) {
           id: movie.id,
           image: ImgURl,
           genre: currentGenres,
+          overview: movie.overview
         },
       ];
     });
@@ -123,7 +129,7 @@ function Row({ title, fetchUrl, idHeader }) {
               addHandler={() => {
                 addToWatchlist(movie);
               }}
-              checked={false}
+              checked={watchlist.includes({id: movie.id}) ? true : false}
             />
           );
         })}

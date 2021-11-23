@@ -46,6 +46,7 @@ function Login() {
             setGlobalUsername(username.username);
             console.log(globalUsername)
             setAuthState(true);
+            // password bug here
             window.location.href = "/";
           }else {
             console.log("404 Not Found");

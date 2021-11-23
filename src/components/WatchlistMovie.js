@@ -3,10 +3,12 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useContext } from "react";
 import { PosterModalCtx } from "./contexts/PosterModalCtx";
+import { WatchlistCtx } from "./contexts/WatchListCtx";
 
-function WatchlistMovie({ name, image, number, genre }) {
+function WatchlistMovie({ name, image, number, genre, removeHandler }) {
   const [minSettings, setMinSettings] = useState(false);
-  const [showPosterModal, setPosterModal] = useContext(PosterModalCtx)
+  const [showPosterModal, setPosterModal] = useContext(PosterModalCtx);
+  const [watchlist, setWatchList] = useContext(WatchlistCtx);
 
   function togglePosterModal(){
     if (showPosterModal == true){
@@ -29,6 +31,7 @@ function WatchlistMovie({ name, image, number, genre }) {
       setMinSettings(false);
     }
   }, []);
+
   return (
     <div className="wl-movie-wrapper">
       <div className="wl-number-wrapper">
@@ -68,6 +71,7 @@ function WatchlistMovie({ name, image, number, genre }) {
           style={{
             display: minSettings == true ? "none" : "flex",
           }}
+          onClick={removeHandler}
         >Remove from Watchlist</button>
       </div>
     </div>
