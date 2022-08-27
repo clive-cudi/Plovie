@@ -28,7 +28,7 @@ function Login() {
   });
   const dispatch = useAuthDispatch();
   function validateCredentials() {
-    return username.username || password.password != null ? true : false;
+    return username.username || password.password !== null ? true : false;
   }
   function handleLoginSubmit() {
     if (validateCredentials() === true) {
